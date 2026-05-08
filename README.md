@@ -1,3 +1,4 @@
+
 # THE-CLIMATE-SMART-SCHOOL-HUB-
 A scalable climate-resilient education platform integrating early warning systems, health readiness, climate education, and resilient infrastructure for schools and vulnerable communities.
 #  Climate Smart School Hub (CSSH)
@@ -177,3 +178,18 @@ For partnerships, collaboration, or pilot opportunities:
 
 Email: zenithkings@gmail.com
 Phone Contact: +2348022508253
+
+# MAIN PROJECT VISUAL
+
+
+<img width="1536" height="1024" alt="CSSH ARCHITECTURE PLAN" src="https://github.com/user-attachments/assets/18bca928-caec-4079-84ac-57d51ded4c5e" />
+
+
+<img width="871" height="540" alt="ARCHITECTURE PROTOTYPE" src="https://github.com/user-attachments/assets/efe1c846-9283-4c70-9d92-62b76bca0858" />
+
+
+<img width="1536" height="1024" alt="USER INTERPHASE" src="https://github.com/user-attachments/assets/409984d7-348b-462f-a5c2-262a9a83f74f" />
+
+
+<img width="1536" height="1024" alt="CSSH INTEGRATION SYSTEM ARCHITECTURE" src="https://github.com/user-attachments/assets/440432eb-1b6e-47b2-acc8-1f04ffab71c5" />
+
