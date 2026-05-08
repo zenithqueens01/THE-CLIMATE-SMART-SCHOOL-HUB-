@@ -1,6 +1,6 @@
 # THE-CLIMATE-SMART-SCHOOL-HUB-
 A scalable climate-resilient education platform integrating early warning systems, health readiness, climate education, and resilient infrastructure for schools and vulnerable communities.
-# 🌍 Climate Smart School Hub (CSSH)
+#  Climate Smart School Hub (CSSH)
 
 ## Overview
 The Climate Smart School Hub (CSSH) is a scalable, child-centered solution that transforms schools into resilient learning, health, and community response centers.
@@ -11,7 +11,7 @@ CSSH is designed to support climate-vulnerable communities by creating safe, sus
 
 ---
 
-# 🎯 Problem Statement
+#  Problem Statement
 
 Climate change is increasingly disrupting education across vulnerable communities. Flooding, extreme heat, disease outbreaks, poor infrastructure, and lack of access to clean water and reliable energy negatively affect children's safety, health, and learning continuity.
 
@@ -25,22 +25,22 @@ CSSH addresses these gaps through an integrated and scalable approach.
 
 ---
 
-# 💡 Solution
+# Solution
 
 The Climate Smart School Hub combines:
 
-- 🌦 Early Warning & Emergency Alerts
-- ❤️ School Health Readiness Systems
-- 📚 Climate Education & Green Skills
-- ☀ Solar-Powered Smart Classrooms
-- 💧 Rainwater Harvesting & WASH Facilities
-- 📱 Offline-First Mobile Technology
-- 📊 Data Analytics & Planning Dashboard
-- 🏘 Community Resilience & Emergency Support
+- Early Warning & Emergency Alerts
+- School Health Readiness Systems
+- Climate Education & Green Skills
+- Solar-Powered Smart Classrooms
+- Rainwater Harvesting & WASH Facilities
+- Offline-First Mobile Technology
+- Data Analytics & Planning Dashboard
+- Community Resilience & Emergency Support
 
 ---
 
-# 🚀 Key Features
+#  Key Features
 
 ## Strategic Planning
 - Climate risk assessment
@@ -69,7 +69,7 @@ The Climate Smart School Hub combines:
 
 ---
 
-# 🧠 Technologies Used
+# Technologies Used
 
 - AI/Data Science
 - Cloud-Based Analytics
@@ -80,7 +80,7 @@ The Climate Smart School Hub combines:
 
 ---
 
-# 🏗 System Architecture
+# System Architecture
 
 The CSSH platform integrates schools, communities, health systems, and climate-response tools into one unified ecosystem.
 
@@ -94,7 +94,7 @@ The CSSH platform integrates schools, communities, health systems, and climate-r
 
 ---
 
-# 📱 Prototype UI
+# Prototype UI
 
 Prototype UI screens include:
 - Dashboard Interface
@@ -105,7 +105,7 @@ Prototype UI screens include:
 
 ---
 
-# 🏫 Infrastructure Model
+# Infrastructure Model
 
 The Climate Smart School Hub includes:
 - Solar-powered classrooms
@@ -117,7 +117,7 @@ The Climate Smart School Hub includes:
 
 ---
 
-# 📈 Impact Goals
+# Impact Goals
 
 CSSH aims to:
 - Reduce climate-related learning disruptions
@@ -129,7 +129,7 @@ CSSH aims to:
 
 ---
 
-# 📍 Current Status
+# Current Status
 
 Prototype & Pilot Preparation Stage
 
@@ -147,7 +147,7 @@ Upcoming:
 
 ---
 
-# 🌱 Scalability Vision
+# Scalability Vision
 
 The project is designed for scalable deployment across schools and communities through partnerships with governments, NGOs, and global education organizations.
 
@@ -158,21 +158,22 @@ Target:
 
 ---
 
-# 🤝 Contributors
+# Contributors
 
-- Kingsley Adetona
+- Mrs Adetona Oluwafunke Oluwaseun
 - Climate Smart School Hub Team
 
 ---
 
-# 📄 License
+# License
 
 MIT License
 
 ---
 
-# 📬 Contact
+# Contact
 
 For partnerships, collaboration, or pilot opportunities:
 
-Email: your-email@example.com
+Email: zenithkings@gmail.com
+Phone Contact: +2348022508253
