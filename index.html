@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSH - Climate Smart School Hub</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <!-- ==========================================
+     AUTHENTICATION OVERLAY
+     ========================================== -->
+<div id="auth-overlay" class="auth-overlay">
+    
+    <!-- LOGIN VIEW -->
+    <div id="auth-login" class="auth-view active">
+        <div class="auth-left">
+            <div class="auth-brand">
+                <div class="brand-logo" style="background: white; color: var(--clr-primary);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h2>CSSH</h2>
+            </div>
+            <div class="auth-hero-text">
+                <h1>Welcome back.</h1>
+                <p>Log in to monitor and manage your climate smart school environment.</p>
+            </div>
+        </div>
+        
+        <div class="auth-right">
+            <div class="auth-form-container">
+                <h2>Sign In</h2>
+                <p class="auth-subtitle">Don't have an account? <a href="#" class="switch-auth" data-target="auth-signup">Create one</a></p>
+                
+                <form id="login-form" class="auth-form">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="login-email" class="form-input" placeholder="admin@school.edu.ng" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary full-width" style="margin-top: 12px;">Access Dashboard</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIGN UP VIEW -->
+    <div id="auth-signup" class="auth-view">
+        <div class="auth-left">
+            <div class="auth-brand">
+                <div class="brand-logo" style="background: white; color: var(--clr-primary);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h2>CSSH</h2>
+            </div>
+            <div class="auth-hero-text">
+                <h1>Join the movement.</h1>
+                <p>Register your institution to start building a greener, safer educational space.</p>
+            </div>
+        </div>
+        
+        <div class="auth-right">
+            <div class="auth-form-container">
+                <h2>Create Account</h2>
+                <p class="auth-subtitle">Already have an account? <a href="#" class="switch-auth" data-target="auth-login">Sign in</a></p>
+                
+                <form id="signup-form" class="auth-form">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="signup-name" class="form-input" placeholder="e.g. Mayowa" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Institution / School Name</label>
+                        <input type="text" id="signup-school" class="form-input" placeholder="e.g. University of Lagos" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-input" placeholder="you@school.edu.ng" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" class="form-input" placeholder="Create a strong password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary full-width" style="margin-top: 12px;">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <!-- Primary Application Layout -->
+    <div class="app-container">
+        
+        <!-- Navigation Sidebar / Bottom Nav -->
+        <nav class="app-nav" aria-label="Main Navigation">
+            <div class="brand-header">
+                <div class="brand-logo" aria-hidden="true">
+                    <!-- Inline SVG for CSSH Logo -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <h1>CSSH</h1>
+                    <p>Climate Smart School Hub</p>
+                </div>
+            </div>
+            
+            <ul class="nav-list" role="menubar">
+                <li class="nav-item active" role="menuitem" data-target="view-home">
+                    <span class="icon">🏠</span>
+                    <span class="label">Home</span>
+                </li>
+                <li class="nav-item" role="menuitem" data-target="view-alerts">
+                    <span class="icon">🔔</span>
+                    <span class="label">Alerts</span>
+                    <span class="badge">3</span>
+                </li>
+                <li class="nav-item" role="menuitem" data-target="view-health">
+                    <span class="icon">❤️</span>
+                    <span class="label">Health</span>
+                </li>
+                <li class="nav-item" role="menuitem" data-target="view-learn">
+                    <span class="icon">📚</span>
+                    <span class="label">Learn</span>
+                </li>
+                <li class="nav-item" role="menuitem" data-target="view-reports">
+                    <span class="icon">📊</span>
+                    <span class="label">Reports</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="app-main" id="main-content">
+            
+            <!-- VIEW: HOME DASHBOARD -->
+            <section id="view-home" class="view-section active">
+                <header class="view-header">
+                    <div class="user-greeting">
+                        <h2>Good morning, Admin 👋</h2>
+                        <p>Government Secondary School, Ikorodu</p>
+                    </div>
+                </header>
+
+                <div class="dashboard-grid">
+                    
+                    <!-- Weather Status Card -->
+                    <article class="card weather-card feature-card">
+                        <div class="card-header">
+                            <h3>Weather Status</h3>
+                            <time datetime="2026-05-13T08:30">Updated: Today, 8:30 AM</time>
+                        </div>
+                        <div class="weather-content">
+                            <div class="weather-icon">☀️</div>
+                            <div class="weather-details">
+                                <h4 class="text-warning">Heat Alert</h4>
+                                <p>Moderate Risk</p>
+                            </div>
+                            <div class="weather-temp">
+                                <h2>32°c</h2>
+                                <p>Feels like 36°C</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- School Status Card -->
+                    <article class="card status-card">
+                        <div class="card-icon text-success">🏫</div>
+                        <div class="card-data">
+                            <h3>School Status</h3>
+                            <p class="value text-success">Open / Safe</p>
+                            <p class="sub-text">All systems normal</p>
+                        </div>
+                    </article>
+
+                    <!-- Health Alerts Card -->
+                    <article class="card status-card">
+                        <div class="card-icon text-danger">❤️</div>
+                        <div class="card-data">
+                            <h3>Health Alerts</h3>
+                            <p class="value">2</p>
+                            <p class="sub-text">Reported cases</p>
+                            <a href="#" class="action-link" data-navigate="view-health">View details →</a>
+                        </div>
+                    </article>
+
+                    <!-- Water & Sanitation Card -->
+                    <article class="card status-card">
+                        <div class="card-icon text-primary">💧</div>
+                        <div class="card-data">
+                            <h3>Water & Sanitation</h3>
+                            <p class="value text-success">Good</p>
+                            <p class="sub-text">All systems functional</p>
+                        </div>
+                    </article>
+
+                    <!-- Energy Status Card -->
+                    <article class="card status-card">
+                        <div class="card-icon text-warning">☀️</div>
+                        <div class="card-data">
+                            <h3>Energy Status</h3>
+                            <p class="value text-success">Solar: 85%</p>
+                            <p class="sub-text">Battery: 72%</p>
+                        </div>
+                    </article>
+
+                    <!-- Recent Notifications Section -->
+                    <section class="card notifications-section full-width">
+                        <div class="section-header">
+                            <h3>Recent Notifications</h3>
+                            <a href="#" class="action-link" data-navigate="view-alerts">View all</a>
+                        </div>
+                        <ul class="notification-list">
+                            <li class="notification-item">
+                                <div class="notif-icon bg-warning">🌡️</div>
+                                <div class="notif-content">
+                                    <h4>Heat Advisory</h4>
+                                    <p>Stay hydrated and avoid outdoor activities.</p>
+                                    <time>Today, 8:20 AM</time>
+                                </div>
+                            </li>
+                            <li class="notification-item">
+                                <div class="notif-icon bg-danger">❤️</div>
+                                <div class="notif-content">
+                                    <h4>Health Update</h4>
+                                    <p>2 students reported with fever.</p>
+                                    <time>Today, 7:45 AM</time>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+
+            <!-- ==========================================
+     VIEW: ALERTS & WARNINGS
+     ========================================== -->
+<section id="view-alerts" class="view-section">
+    <header class="view-header">
+        <h2>Alerts & Warnings</h2>
+    </header>
+
+    <div class="tabs-container">
+        <button class="tab-btn active">All</button>
+        <button class="tab-btn">Weather</button>
+        <button class="tab-btn">Health</button>
+        <button class="tab-btn">Security</button>
+    </div>
+
+    <div class="alerts-feed">
+        <!-- High Risk Alert -->
+        <article class="alert-card risk-high">
+            <div class="alert-header">
+                <div class="alert-title">
+                    <span class="alert-icon">⚠️</span>
+                    <h3>Flood Alert</h3>
+                </div>
+                <span class="badge badge-high">High Risk</span>
+            </div>
+            <p class="alert-desc">Heavy rainfall expected in your area within the next 24 hours.</p>
+            <time>Today, 8:15 AM</time>
+            <div class="action-box">
+                <h4>Recommended Action</h4>
+                <p>Prepare for possible evacuation. Move to higher ground if needed.</p>
+            </div>
+        </article>
+
+        <!-- Moderate Risk Alert -->
+        <article class="alert-card risk-moderate">
+            <div class="alert-header">
+                <div class="alert-title">
+                    <span class="alert-icon">🌡️</span>
+                    <h3>Heatwave Alert</h3>
+                </div>
+                <span class="badge badge-moderate">Moderate Risk</span>
+            </div>
+            <p class="alert-desc">High temperatures expected. Stay hydrated and avoid outdoor activities.</p>
+            <time>Today, 7:50 AM</time>
+            <div class="action-box">
+                <h4>Recommended Action</h4>
+                <p>Drink water regularly. Schedule outdoor activities in the morning or evening.</p>
+            </div>
+        </article>
+
+        <!-- Low Risk / Safe Status -->
+        <article class="alert-card risk-low">
+            <div class="alert-header">
+                <div class="alert-title">
+                    <span class="alert-icon text-success">✅</span>
+                    <h3>Safe Status Update</h3>
+                </div>
+                <span class="badge badge-low">Low Risk</span>
+            </div>
+            <p class="alert-desc">Current conditions are normal. School can continue with regular activities.</p>
+            <time>Yesterday, 6:30 PM</time>
+        </article>
+        
+        <button class="btn-primary full-width">📨 Send Alert to Parents/Guardians</button>
+    </div>
+</section>
+
+<!-- ==========================================
+     VIEW: HEALTH MONITORING
+     ========================================== -->
+<section id="view-health" class="view-section">
+    <header class="view-header">
+        <h2>Student Health Check</h2>
+    </header>
+
+    <div class="form-container">
+        <div class="card info-card">
+            <h3 class="card-title">Student Information</h3>
+            <div class="info-row"><span>Student Name</span> <strong>John Daniel</strong></div>
+            <div class="info-row"><span>Class</span> <strong>SS 2A</strong></div>
+            <div class="info-row"><span>Age</span> <strong>15</strong></div>
+        </div>
+
+        <form class="card health-form">
+            <h3 class="card-title">Symptoms Check</h3>
+            <p class="sub-text" style="margin-bottom: 16px;">Select all that apply</p>
+            
+            <label class="checkbox-group">
+                <span>Fever</span>
+                <input type="checkbox" checked>
+            </label>
+            <label class="checkbox-group">
+                <span>Headache</span>
+                <input type="checkbox" checked>
+            </label>
+            <label class="checkbox-group">
+                <span>Cough</span>
+                <input type="checkbox">
+            </label>
+            <label class="checkbox-group">
+                <span>Fatigue</span>
+                <input type="checkbox" checked>
+            </label>
+
+            <div class="input-group" style="margin-top: 24px;">
+                <label>Temperature (°C)</label>
+                <input type="number" value="38.2" step="0.1" class="form-input text-danger temp-input">
+            </div>
+
+            <div class="input-group">
+                <label>Notes (optional)</label>
+                <textarea class="form-input" rows="2">Student complains of body pain.</textarea>
+            </div>
+
+            <button type="button" class="btn-primary full-width">Submit Report</button>
+        </form>
+
+        <div class="card recommendation-card risk-low">
+            <div class="alert-title">
+                <span class="alert-icon text-success">✅</span>
+                <h4>Recommendation</h4>
+            </div>
+            <p>Monitor the student and refer to the school clinic.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     VIEW: LEARNING HUB
+     ========================================== -->
+<section id="view-learn" class="view-section">
+    <header class="view-header">
+        <h2>Learning Hub</h2>
+    </header>
+
+    <div class="learn-hero">
+        <h3>Empowering students with climate knowledge and green skills.</h3>
+        <!-- Abstract CSS shapes simulating the hero graphic -->
+        <div class="hero-graphic">🌱 🌍 ☀️</div>
+    </div>
+
+    <div class="tabs-container">
+        <button class="tab-btn active">All Topics</button>
+        <button class="tab-btn">Climate</button>
+        <button class="tab-btn">Environment</button>
+        <button class="tab-btn">Skills</button>
+    </div>
+
+    <div class="lesson-list">
+        <div class="lesson-item card">
+            <div class="lesson-icon" style="background: #E6F4EA;">🌍</div>
+            <div class="lesson-details">
+                <h4>Climate Change Basics</h4>
+                <p>Understand the causes and impacts of climate change.</p>
+                <span>8 Lessons</span>
+            </div>
+            <div class="lesson-arrow">›</div>
+        </div>
+        
+        <div class="lesson-item card">
+            <div class="lesson-icon" style="background: #E0F2FE;">💧</div>
+            <div class="lesson-details">
+                <h4>Water & Sanitation</h4>
+                <p>Learn about clean water, sanitation and hygiene.</p>
+                <span class="text-primary">6 Lessons</span>
+            </div>
+            <div class="lesson-arrow">›</div>
+        </div>
+
+        <div class="lesson-item card">
+            <div class="lesson-icon" style="background: #DCFCE7;">🍃</div>
+            <div class="lesson-details">
+                <h4>Environmental Protection</h4>
+                <p>Protect our environment and biodiversity.</p>
+                <span>7 Lessons</span>
+            </div>
+            <div class="lesson-arrow">›</div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     VIEW: REPORTS & INSIGHTS
+     ========================================== -->
+<section id="view-reports" class="view-section">
+    <header class="view-header" style="display: flex; justify-content: space-between;">
+        <h2>Reports & Insights</h2>
+        <button class="btn-outline">📅</button>
+    </header>
+
+    <div class="input-group" style="margin-bottom: 24px;">
+        <label>Time Range</label>
+        <select class="form-input select-input">
+            <option>This Week (May 12 - May 18, 2026)</option>
+            <option>Last Week</option>
+            <option>This Month</option>
+        </select>
+    </div>
+
+    <h3 class="section-title">Overview</h3>
+    <div class="dashboard-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 32px;">
+        <article class="card metric-card">
+            <p class="metric-label">👥 Attendance</p>
+            <h2>85%</h2>
+            <p class="trend up">↑ 5% from last week</p>
+        </article>
+        <article class="card metric-card">
+            <p class="metric-label">❤️ Health Incidents</p>
+            <h2>5</h2>
+            <p class="trend down">↓ 2 from last week</p>
+        </article>
+        <article class="card metric-card">
+            <p class="metric-label">📣 Alerts Sent</p>
+            <h2>3</h2>
+            <p class="trend up">↑ 1 from last week</p>
+        </article>
+        <article class="card metric-card">
+            <p class="metric-label">🛡️ Risk Level</p>
+            <h2>Medium</h2>
+        </article>
+    </div>
+
+    <!-- Simulated Chart Area -->
+    <div class="card chart-card" style="margin-bottom: 24px;">
+        <h3 class="card-title">Attendance Trend</h3>
+        <div class="bar-chart-vertical">
+            <div class="bar-col"><div class="bar" style="height: 75%;"></div><span>Mon</span></div>
+            <div class="bar-col"><div class="bar" style="height: 80%;"></div><span>Tue</span></div>
+            <div class="bar-col"><div class="bar" style="height: 85%;"></div><span>Wed</span></div>
+            <div class="bar-col"><div class="bar" style="height: 82%;"></div><span>Thu</span></div>
+            <div class="bar-col"><div class="bar" style="height: 65%;"></div><span>Fri</span></div>
+        </div>
+    </div>
+
+    <button class="btn-outline full-width" style="display: flex; justify-content: space-between;">
+        Export school data and reports <span style="font-size: 1.2rem;">📥</span>
+    </button>
+</section>
+
+        </main>
+    </div>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
